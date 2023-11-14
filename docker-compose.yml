@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo:4.4
+    container_name: blockchain-mongo
+    volumes:
+      - blockchain-mongo:/data/db
+    ports:
+      - "27018:27017"
+    restart: always
+volumes:
+  blockchain-mongo:
